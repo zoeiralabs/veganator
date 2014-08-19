@@ -3,8 +3,7 @@
 	"name": "nVampeta",
 	"version": "1.0",
 	"description": "Replaces all images on all pages to Vampeta. (Fork of nCage plugin, all credits to qwertyman1)",
-	"icons": { 
-		"16": "icon16.png",
+	"icons": {
     	"48": "icon48.png",
         "128": "icon128.png"
     },
