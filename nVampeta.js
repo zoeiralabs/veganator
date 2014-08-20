@@ -25,7 +25,6 @@
 			'http://img.r7.com/images/2013/07/01/08_59_09_602_file?dimensions=300x490',
 			'http://e.i.uol.com.br/futebol/vampeta_careca.jpg',
 			'http://www.estadao.com.br/fotos/vampeta292_JOSE_PATRICIO__ae_22122009.jpg',
-			'http://www.diariosp.com.br/diariosaopaulo/upload/blog_conteudo/1322413430vampeta310x316.jpeg',
 			'http://borgesluciano.blog.terra.com.br/files/2009/01/vampeta1.jpg',
 			'http://andrebarcinski.folha.blog.uol.com.br/images/vampeta.jpg',
 			'http://www.lacancha.com/images/p-vampeta.jpg',
