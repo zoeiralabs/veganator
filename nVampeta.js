@@ -4,6 +4,11 @@
     var self = $.nVampeta = new function(){};
 	
     $.extend(self, {
+
+    	nVampetaBackgrounds : [
+    		'http://www.away.com.br/nvampeta/bg1.png'
+    	],
+
         nVampetaImgs : [
 			'http://1.bp.blogspot.com/_Ytf2Ze0HWAA/TGvat7eAx1I/AAAAAAAAAlA/rAIdDz9ThO8/s400/m_vampeta2_0e156bc6f4f2048e8089c5fc47cf4a7a.jpg',
 			'http://i1.r7.com/data/files/2C95/948F/3D68/381E/013D/6944/E84A/57B5/vampeta.jpg',
@@ -51,6 +56,7 @@
 			'http://4.bp.blogspot.com/-WNSEz3hEJ1c/T9jl_S2QDnI/AAAAAAAAAFU/BsmMylYfDC4/s1600/Vampeta.jpg',
 			'http://cache-assets.flogao.com.br/s26/10/02/06/107/45268164.jpg'
         ],
+
         handleImages : function (lstImgs, time)
         {
             $.each($('img'), function(i,item) { 
@@ -83,16 +89,38 @@
 					}
 				}
             });
-			
+
             //Keep replacing
             if (time > 0) {
                 setTimeout(function () { self.handleImages(lstImgs, time); }, time);
             }
+        },
+
+        handleLogo : function (bgImgs, time)
+        {
+			$backgroundImages = $(
+            	'[class*=logo], [class*=header], [id*=header], [id*=logo],' +
+            	'[class*=logo] span, [class*=header] span, [id*=header] span, [id*=logo] span,' +
+            	'[class*=logo] h1, [class*=header] h1, [id*=header] h1, [id*=logo] h1'
+            	)
+            	.filter(function() {
+            		backgroundImg = $(this).css('background-image');
+            		return backgroundImg && backgroundImg != 'none';
+            	}
+            );
+
+            $backgroundImages.each(function(i, item) {
+            	$(item).css('background-image', 'url(' + bgImgs[Math.floor(Math.random() * bgImgs.length)] + ')');
+            	$(item).css('background-position', '0 0');
+            	$(item).css('background-repeat', 'no-repeat');
+            	$(item).css('background-size', 'contain');
+            });
         }
     });
 
     //Run on jQuery ready
     $(function(){
         self.handleImages(self.nVampetaImgs, 3000);
+     	self.handleLogo(self.nVampetaBackgrounds, 3000);
     });
 })(jQuery);
