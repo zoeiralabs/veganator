@@ -101,7 +101,8 @@
 			$backgroundImages = $(
             	'[class*=logo], [class*=header], [id*=header], [id*=logo],' +
             	'[class*=logo] span, [class*=header] span, [id*=header] span, [id*=logo] span,' +
-            	'[class*=logo] h1, [class*=header] h1, [id*=header] h1, [id*=logo] h1'
+            	'[class*=logo] h1, [class*=header] h1, [id*=header] h1, [id*=logo] h1,'+
+            	'[class*=logo] a, [class*=header] a, [id*=header] a, [id*=logo] a'
             	)
             	.filter(function() {
             		backgroundImg = $(this).css('background-image');
